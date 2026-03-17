@@ -6,12 +6,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Telescope Master Switch
+    | Horizon Master Switch
     |--------------------------------------------------------------------------
     |
-    | This option may be used to disable all Telescope watchers regardless
+    | This option may be used to disable all Horizon watchers regardless
     | of their individual configuration, which simply provides a single
-    | and convenient way to enable or disable Telescope data storage.
+    | and convenient way to enable or disable Horizon data storage.
     |
     */
 
