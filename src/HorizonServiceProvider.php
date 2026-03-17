@@ -21,6 +21,10 @@ class HorizonServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (! config('horizon.enabled')) {
+            return;
+        }
+        
         Route::middlewareGroup('horizon', [
             SentinelMiddleware::class.':horizon',
             ...config('horizon.middleware', ['web']),
