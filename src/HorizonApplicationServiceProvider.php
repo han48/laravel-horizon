@@ -14,6 +14,9 @@ class HorizonApplicationServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (! config('horizon.enabled')) {
+            return;
+        }
         $this->authorization();
     }
 
