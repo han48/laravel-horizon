@@ -55,6 +55,13 @@ class Horizon
     public static $useDarkTheme = false;
 
     /**
+     * Indicates if Fortify routes will be registered.
+     *
+     * @var bool
+     */
+    public static $registersRoutes = true;
+
+    /**
      * The database configuration methods.
      *
      * @var array
@@ -222,6 +229,18 @@ class Horizon
     public static function routeSmsNotificationsTo($number)
     {
         static::$smsNumber = $number;
+
+        return new static;
+    }
+
+    /**
+     * Configure Fortify to not register its routes.
+     *
+     * @return static
+     */
+    public static function ignoreRoutes()
+    {
+        static::$registersRoutes = false;
 
         return new static;
     }
